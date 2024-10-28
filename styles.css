@@ -6,7 +6,7 @@
 
 body {
     /* Substituindo a cor sólida pelo GIF de fundo */
-    background-image: src='/assets/back-wall.gif';
+    background-image: url('/assets/back-wall.gif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

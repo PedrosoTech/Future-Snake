@@ -134,7 +134,7 @@ function desenharJogo() {
         );
         contexto.fill();
     }
-    
+
     // Desenhar a maçã usando a imagem
     contexto.drawImage(
         imagemMaca,
@@ -233,11 +233,7 @@ function iniciarJogo() {
 
 // Carregar a imagem da maçã
 const imagemMaca = new Image();
-imagemMaca.src = '../assets/apple.png';
-
-// Adicione no início do arquivo com as outras constantes
-const imagemCabeca = new Image();
-imagemCabeca.src = '../assets/head-snake.png';
+imagemMaca.src = 'assets/apple.png';
 
 // Desenhar o primeiro frame do jogo
 desenharJogo();

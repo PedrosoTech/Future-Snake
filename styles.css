@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Substituindo a cor sólida pelo GIF de fundo */
+    background-image: url('../assets/back-wall.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 20px;
+    /* Alterando para um tom mais claro com transparência */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border: 2px solid #000;
+    display: block;
+    margin: 20px auto;
+    background-color: #04040c; /* Mantendo o tom escuro original */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.pontuacao {
+    text-align: center;
+    font-size: clamp(18px, 4vw, 24px);
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icone-maca {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+#pontos {
+    color: #4CAF50;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 5px;
+    }
+}
+
+/* Adicione isso ao final do seu arquivo CSS */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: rgba(4, 4, 12, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.modal h2 {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.modal p {
+    color: #4CAF50;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.modal button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.modal button:hover {
+    background-color: #45a049;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.velocidade {
+    color: #fff;
+    font-size: clamp(16px, 3vw, 20px);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin: 20px 0;
+}
+
+.velocidade select {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #4CAF50;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    outline: none;
+    margin-left: 10px;
+}
+
+.velocidade select:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.velocidade select option {
+    background-color: #04040c;
+    color: #4CAF50;
+}

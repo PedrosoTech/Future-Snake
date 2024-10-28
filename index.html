@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUTURE SNAKE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="pontuacao">
+            <img src="../assets/apple.png" alt="Maçã" class="icone-maca">
+            <span id="pontos">0</span>
+        </div>
+        <canvas id="cobrinha"></canvas>
+    </div>
+    
+    <!-- Modal de Game Over -->
+    <div id="modalGameOver" class="modal">
+        <div class="modal-content">
+            <h2>VOCÊ PERDEU!</h2>
+            <p>Pontuação: <span id="pontuacaoFinal">0</span></p>
+            <div class="velocidade">
+                <label for="velocidade">Velocidade:</label>
+                <select id="velocidade">
+                    <option value="150">Lenta</option>
+                    <option value="100" selected>Normal</option>
+                    <option value="50">Rápida</option>
+                </select>
+            </div>
+            <button onclick="reiniciarJogo()">JOGAR NOVAMENTE</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
